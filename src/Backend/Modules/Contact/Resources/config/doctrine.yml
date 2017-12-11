@@ -1,0 +1,12 @@
+doctrine:
+  dbal:
+    types:
+      contact_contact_form_image_type: Backend\Modules\Contact\Domain\ContactForm\ImageDBALType
+  orm:
+    mappings:
+      contact_contact_form:
+        type: annotation
+        is_bundle: false
+        dir: "%kernel.project_dir%/src/Backend/Modules/Contact/Domain/ContactForm"
+        alias: ContactContactForm
+        prefix: Backend\Modules\Contact\Domain\ContactForm

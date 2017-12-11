@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<locale>
+  <Backend>
+    <Contact>
+      <item type="label" name="Contact">
+        <translation language="nl"><![CDATA[contact]]></translation>
+        <translation language="en"><![CDATA[contact]]></translation>
+      </item>
+      <item type="label" name="ContactData">
+        <translation language="nl"><![CDATA[contact gegevens]]></translation>
+        <translation language="en"><![CDATA[contact data]]></translation>
+      </item>
+      <item type="label" name="GetInTouch">
+        <translation language="nl"><![CDATA[contact opnemen]]></translation>
+        <translation language="en"><![CDATA[get in touch]]></translation>
+      </item>
+      <item type="label" name="Street">
+        <translation language="nl"><![CDATA[straat]]></translation>
+        <translation language="en"><![CDATA[street]]></translation>
+      </item>
+      <item type="label" name="ZipCode">
+        <translation language="nl"><![CDATA[postcode]]></translation>
+        <translation language="en"><![CDATA[zip code]]></translation>
+      </item>
+      <item type="label" name="City">
+        <translation language="nl"><![CDATA[plaats]]></translation>
+        <translation language="en"><![CDATA[city]]></translation>
+      </item>
+      <item type="label" name="SocialMedia">
+        <translation language="nl"><![CDATA[social media]]></translation>
+        <translation language="en"><![CDATA[social media]]></translation>
+      </item>
+      <item type="label" name="GoogleMapsKey">
+        <translation language="nl"><![CDATA[Google Maps sleutel]]></translation>
+        <translation language="en"><![CDATA[Google Maps key]]></translation>
+      </item>
+      <item type="label" name="Forms">
+        <translation language="nl"><![CDATA[formulieren]]></translation>
+        <translation language="en"><![CDATA[forms]]></translation>
+      </item>
+      <item type="label" name="ContactForm">
+        <translation language="nl"><![CDATA[contact formulier]]></translation>
+        <translation language="en"><![CDATA[contact form]]></translation>
+      </item>
+      <item type="label" name="ChooseForm">
+        <translation language="nl"><![CDATA[selecteer formulier]]></translation>
+        <translation language="en"><![CDATA[choose form]]></translation>
+      </item>
+      <item type="label" name="BackgroundImage">
+        <translation language="nl"><![CDATA[achtergrond afbeelding]]></translation>
+        <translation language="en"><![CDATA[background image]]></translation>
+      </item>
+      <item type="label" name="ShowTitle">
+        <translation language="nl"><![CDATA[laat titel zien]]></translation>
+        <translation language="en"><![CDATA[show title]]></translation>
+      </item>
+      <item type="label" name="Form">
+        <translation language="nl"><![CDATA[formulier]]></translation>
+        <translation language="en"><![CDATA[form]]></translation>
+      </item>
+      <item type="label" name="Phone">
+        <translation language="nl"><![CDATA[telefoonnummer]]></translation>
+        <translation language="en"><![CDATA[phone]]></translation>
+      </item>
+    </Contact>
+    <Core>
+      <item type="label" name="Contact">
+        <translation language="nl"><![CDATA[contact]]></translation>
+        <translation language="en"><![CDATA[contact]]></translation>
+      </item>
+      <item type="label" name="GetInTouchBig">
+        <translation language="nl"><![CDATA[contact opnemen (groot)]]></translation>
+        <translation language="en"><![CDATA[get in touch (big)]]></translation>
+      </item>
+      <item type="label" name="GetInTouch">
+        <translation language="nl"><![CDATA[contact opnemen]]></translation>
+        <translation language="en"><![CDATA[get in touch]]></translation>
+      </item>
+    </Core>
+  </Backend>
+
+  <Frontend>
+    <Core>
+      <item type="label" name="GetInTouch">
+        <translation language="nl"><![CDATA[contact opnemen]]></translation>
+        <translation language="en"><![CDATA[get in touch]]></translation>
+      </item>
+      <item type="label" name="Address">
+        <translation language="nl"><![CDATA[adres]]></translation>
+        <translation language="en"><![CDATA[address]]></translation>
+      </item>
+      <item type="label" name="Phone">
+        <translation language="nl"><![CDATA[telefoon]]></translation>
+        <translation language="en"><![CDATA[phone]]></translation>
+      </item>
+      <item type="label" name="Email">
+        <translation language="nl"><![CDATA[e-mail]]></translation>
+        <translation language="en"><![CDATA[email]]></translation>
+      </item>
+      <item type="label" name="Social">
+        <translation language="nl"><![CDATA[social]]></translation>
+        <translation language="en"><![CDATA[social]]></translation>
+      </item>
+    </Core>
+  </Frontend>
+</locale>

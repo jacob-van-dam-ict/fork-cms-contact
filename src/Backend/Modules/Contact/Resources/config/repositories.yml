@@ -1,0 +1,6 @@
+services:
+    contact.repository.contact_form:
+        class: Backend\Modules\Contact\Domain\ContactForm\ContactFormRepository
+        factory: ["@doctrine.orm.entity_manager", getRepository]
+        arguments:
+            - Backend\Modules\Contact\Domain\ContactForm\ContactForm

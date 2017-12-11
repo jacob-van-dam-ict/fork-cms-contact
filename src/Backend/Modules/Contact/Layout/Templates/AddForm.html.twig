@@ -1,0 +1,72 @@
+{% extends '/Layout/Templates/base.html.twig' %}
+{% import "Layout/Templates/macros.html.twig" as macro %}
+
+{% block content %}
+  {{ form_start(form) }}
+  <div class="row fork-module-content">
+    <div class="col-md-12">
+      <div class="form-group">
+        <label for="title" class="control-label">{{ 'lbl.Title'|trans|ucfirst }}</label>
+        {{ form_widget(form.title, {'attr' : {'class' : 'title'}}) }}
+      </div>
+    </div>
+  </div>
+
+  <div class="row fork-module-content">
+    <div class="col-md-12">
+      <div role="tabpanel">
+        <ul class="nav nav-tabs" role="tablist">
+          <li role="presentation" class="active">
+            <a href="#tabContent" aria-controls="content" role="tab"
+               data-toggle="tab">{{ 'lbl.Content'|trans|capitalize }}</a>
+          </li>
+        </ul>
+
+        <div class="tab-content">
+          <div role="tabpanel" class="tab-pane active" id="tabContent">
+            <div class="row">
+              <div class="col-md-8">
+                <div class="panel panel-default panel-editor">
+                  <div class="panel-heading">
+                    {{ form_label(form.text) }}
+                  </div>
+                  <div class="panel-body">
+                    {{ form_widget(form.text) }}
+                  </div>
+                  {{ form_errors(form.text) }}
+                </div>
+              </div>
+              <div class="col-md-4">
+                {{ form_row(form.background_image) }}
+                {{ form_row(form.form) }}
+
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    {{ 'lbl.Settings'|trans|ucfirst }}
+                  </div>
+                  <div class="panel-body">
+                    {{ form_label(form.show_title) }}
+                    {{ form_widget(form.show_title) }}
+                    {{ form_errors(form.show_title) }}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row fork-module-actions">
+    <div class="col-md-12">
+      <div class="btn-toolbar">
+        <div class="btn-group pull-right" role="group">
+          <button id="addButton" type="submit" name="add" class="btn btn-primary">
+            <span class="fa fa-plus-square"></span>{{ 'lbl.Add'|trans|capitalize }}
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  {{ form_end(form) }}
+{% endblock %}

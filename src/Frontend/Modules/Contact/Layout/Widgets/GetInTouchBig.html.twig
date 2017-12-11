@@ -1,0 +1,58 @@
+<div class="footer bg-secondary padding-top padding-bottom">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8 col-md-12 col-sm-12 no-gutters bg-white shadow">
+        <div class="row">
+          <div id="map" class="col-md-5">
+          </div>
+          <div class="col-md-7 inner naw">
+            <h6>{{ 'lbl.GetInTouch'|trans|ucfirst }}</h6>
+            <h3>{{ siteTitle }}</h3>
+            <table cellpadding="0" cellspacing="0">
+              <tbody>
+              <tr>
+                <td valign="top" class="text-right">{{ 'lbl.Address'|trans|ucfirst }}</td>
+                <td valign="top" class="text-left">{{ contactData.street }} {{ contactData.number }}, {{ contactData.zip_code }} {{ contactData.city }}</td>
+              </tr>
+              <tr>
+                <td valign="top" class="text-right">{{ 'lbl.Phone'|trans|ucfirst }}</td>
+                <td valign="top" class="text-left"><a href="tel:{{ contactData.phone }}">{{ contactData.phone }}</a></td>
+              </tr>
+              <tr>
+                <td valign="top" class="text-right">{{ 'lbl.Email'|trans|ucfirst }}</td>
+                <td valign="top" class="text-left"><a href="mailto:{{ contactData.email }}">{{ contactData.email }}</a></td>
+              </tr>
+              {% if contactData.socialUrls %}
+                <tr>
+                  <td valign="top" class="text-right">Social</td>
+                  <td valign="top" class="text-left">
+                    {% for key, social in contactData.socialUrls %}
+                        <a href="{{ social }}" target="_blank"><span class="social social-{{ key }}"></span></a>
+                    {% endfor %}
+                  </td>
+                </tr>
+              {% endif %}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% if contactData.socialUrls %}
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Organization",
+      "name": "{{ siteTitle }}",
+      "url": "{{ siteUrl }}",
+      "sameAs": [
+        {% for url in contactData.socialUrls %}
+              "{{ url }}"{% if not loop.last %},{% endif %}
+        {% endfor %}
+      ]
+    }
+  </script>
+{% endif %}

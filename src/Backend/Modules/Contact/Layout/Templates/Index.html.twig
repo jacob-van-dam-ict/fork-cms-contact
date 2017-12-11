@@ -1,0 +1,135 @@
+{% extends '/Layout/Templates/base.html.twig' %}
+{% import "Layout/Templates/macros.html.twig" as macro %}
+
+{% block content %}
+  <div class="row fork-module-content">
+    <div class="col-md-12">
+      <div role="tabpanel">
+        <ul class="nav nav-tabs" role="tablist">
+          <li role="presentation" class="active">
+            <a href="#tabContactData" aria-controls="content" role="tab"
+               data-toggle="tab">{{ 'lbl.ContactData'|trans|capitalize }}</a>
+          </li>
+          <li role="presentation">
+            <a href="#tabForms" aria-controls="content" role="tab"
+               data-toggle="tab">{{ 'lbl.Forms'|trans|capitalize }}</a>
+          </li>
+        </ul>
+
+        <div class="tab-content">
+          <div role="tabpanel" class="tab-pane active" id="tabContactData">
+            {{ form_start(form) }}
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                {{ 'lbl.ContactData'|trans|ucfirst }}
+              </div>
+              <div class="panel-body">
+                <div class="form-group">
+                  {{ form_label(form.street) }}
+                  {{ form_widget(form.street) }}
+                  {{ form_errors(form.street) }}
+                </div>
+                <div class="form-group">
+                  {{ form_label(form.number) }}
+                  {{ form_widget(form.number) }}
+                  {{ form_errors(form.number) }}
+                </div>
+                <div class="form-group">
+                  {{ form_label(form.zip_code) }}
+                  {{ form_widget(form.zip_code) }}
+                  {{ form_errors(form.zip_code) }}
+                </div>
+                <div class="form-group">
+                  {{ form_label(form.city) }}
+                  {{ form_widget(form.city) }}
+                  {{ form_errors(form.city) }}
+                </div>
+                <div class="form-group">
+                  {{ form_label(form.email) }}
+                  {{ form_widget(form.email) }}
+                  {{ form_errors(form.email) }}
+                </div>
+                <div class="form-group">
+                  {{ form_label(form.phone) }}
+                  {{ form_widget(form.phone) }}
+                  {{ form_errors(form.phone) }}
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                {{ 'lbl.SocialMedia'|trans|ucfirst }}
+              </div>
+              <div class="panel-body">
+                <div class="form-group">
+                  {{ form_label(form.facebook) }}
+                  {{ form_widget(form.facebook) }}
+                  {{ form_errors(form.facebook) }}
+                </div>
+                <div class="form-group">
+                  {{ form_label(form.twitter) }}
+                  {{ form_widget(form.twitter) }}
+                  {{ form_errors(form.twitter) }}
+                </div>
+                <div class="form-group">
+                  {{ form_label(form.linked_in) }}
+                  {{ form_widget(form.linked_in) }}
+                  {{ form_errors(form.linked_in) }}
+                </div>
+                <div class="form-group">
+                  {{ form_label(form.google_plus) }}
+                  {{ form_widget(form.google_plus) }}
+                  {{ form_errors(form.google_plus) }}
+                </div>
+                <div class="form-group">
+                  {{ form_label(form.pinterest) }}
+                  {{ form_widget(form.pinterest) }}
+                  {{ form_errors(form.pinterest) }}
+                </div>
+                <div class="form-group">
+                  {{ form_label(form.instagram) }}
+                  {{ form_widget(form.instagram) }}
+                  {{ form_errors(form.instagram) }}
+                </div>
+                <div class="form-group">
+                  {{ form_label(form.youtube) }}
+                  {{ form_widget(form.youtube) }}
+                  {{ form_errors(form.youtube) }}
+                </div>
+                <div class="form-group">
+                  {{ form_label(form.google_maps_key) }}
+                  {{ form_widget(form.google_maps_key) }}
+                  {{ form_errors(form.google_maps_key) }}
+                </div>
+              </div>
+            </div>
+
+            <div class="row fork-module-actions">
+              <div class="col-md-12">
+                <div class="btn-toolbar">
+                  <div class="btn-group pull-right" role="group">
+                    <button id="addButton" type="submit" name="add" class="btn btn-primary">
+                      <span class="fa fa-plus-square"></span>&nbsp;
+                      {{ 'lbl.Save'|trans|ucfirst }}
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {{ form_end(form) }}
+		      </div>
+          <div role="tabpanel" class="tab-pane" id="tabForms">
+            {{ macro.dataGrid(formDataGrid) }}
+            <div class="row fork-module-actions">
+              <div class="col-md-12">
+                {{ macro.buttonIcon( geturl('AddForm'), 'plus-square', 'lbl.Add'|trans|ucfirst) }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+{% endblock %}

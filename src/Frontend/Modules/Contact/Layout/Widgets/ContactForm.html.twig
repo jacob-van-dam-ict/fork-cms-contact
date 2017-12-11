@@ -1,0 +1,19 @@
+<div class="quick-contact widget width padding-top padding-bottom parallax-window" data-parallax="scroll" data-image-src="{{ contactForm.backgroundImage.webPath('1440x790') }}">
+  <div class="container">
+    <div class="row">
+      {% if contactForm.showTitle %}
+        <div class="col-md-12">
+          <h1>{{ contactForm.title }}</h1>
+        </div>
+      {% endif %}
+      <div class="col-md-5">
+        {{ contactForm.text|raw }}
+      </div>
+      <div class="col-md-7">
+        <div class="bg-light inner shadow">
+          {{ parsewidget('FormBuilder', 'Form', contactForm.form) }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

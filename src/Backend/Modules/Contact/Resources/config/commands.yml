@@ -1,0 +1,28 @@
+services:
+    contact.handler.update_contact:
+        class: Backend\Modules\Contact\Domain\Contact\Command\UpdateContactHandler
+        arguments:
+            - "@fork.settings"
+        tags:
+            - { name: command_handler, handles: Backend\Modules\Contact\Domain\Contact\Command\UpdateContact }
+
+    contact.handler.create_contact_form:
+        class: Backend\Modules\Contact\Domain\ContactForm\Command\CreateContactFormHandler
+        arguments:
+            - "@contact.repository.contact_form"
+        tags:
+            - { name: command_handler, handles: Backend\Modules\Contact\Domain\ContactForm\Command\CreateContactForm }
+
+    contact.handler.update_contact_form:
+        class: Backend\Modules\Contact\Domain\ContactForm\Command\UpdateContactFormHandler
+        arguments:
+            - "@contact.repository.contact_form"
+        tags:
+            - { name: command_handler, handles: Backend\Modules\Contact\Domain\ContactForm\Command\UpdateContactForm }
+
+    contact.handler.delete_contact_form:
+        class: Backend\Modules\Contact\Domain\ContactForm\Command\DeleteContactFormHandler
+        arguments:
+            - "@contact.repository.contact_form"
+        tags:
+            - { name: command_handler, handles: Backend\Modules\Contact\Domain\ContactForm\Command\DeleteContactForm }
